@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: cjbi
+  User: wangzs
   Date: 2018/4/6
   Time: 8:48
   To change this template use File | Settings | File Templates.
@@ -42,11 +42,11 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>Wetech</b>Admin</a>
+        <a href="#"><b>Uifree</b>Admin</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">登陆以开始你的会话</p>
+        <%--<p class="login-box-msg">登陆以开始你的会话</p>--%>
 
         <form method="post" data-toggle="validator">
             <div class="form-group has-feedback">

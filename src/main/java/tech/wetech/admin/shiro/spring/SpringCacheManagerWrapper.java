@@ -16,8 +16,8 @@ import java.util.*;
 
 /**
  * 包装Spring cache抽象
- * <p>User: Zhang Kaitao
- * <p>Date: 13-3-23 上午8:26
+ * <p>User: wangzs
+ * <p>Date: 17-3-23 上午8:26
  * <p>Version: 1.0
  */
 public class SpringCacheManagerWrapper implements CacheManager {

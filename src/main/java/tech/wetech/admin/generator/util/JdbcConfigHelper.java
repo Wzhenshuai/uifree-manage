@@ -12,7 +12,7 @@ import java.util.Properties;
 /**
  * MBG 数据库连接配置 <br>
  *
- * @author cjbi
+ * @author wangzs
  * @date 2018/1/5
  */
 public class JdbcConfigHelper {

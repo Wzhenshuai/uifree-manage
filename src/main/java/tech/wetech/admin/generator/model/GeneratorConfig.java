@@ -10,7 +10,7 @@ import java.util.List;
  * GeneratorConfig is the Config of mybatis generator config exclude database
  * config
  * <p>
- * Created by cjbi on 6/16/16.
+ * Created by wangzs
  */
 public class GeneratorConfig {
 

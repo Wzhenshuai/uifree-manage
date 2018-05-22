@@ -11,7 +11,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author cjbi
+ * @author wangzs
  */
 public class User implements Serializable{
     /**

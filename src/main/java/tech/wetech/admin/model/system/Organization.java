@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * @author cjbi
+ * @author wangzs
  */
 public class Organization implements Serializable {
     /**

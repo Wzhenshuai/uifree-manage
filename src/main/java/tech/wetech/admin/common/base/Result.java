@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author cjbi
+ * @author wangzs
  */
 public class Result<T> implements Serializable {
 

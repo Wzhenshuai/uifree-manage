@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>管理控制台 | Wetech Admin</title>
+    <title>管理控制台 | Uifree Admin</title>
     <!-- favicon icon -->
     <link rel="icon" type="image/png" href="<%=request.getContextPath()%>/static/img/favicon.ico">
     <!-- Tell the browser to be responsive to screen width -->
@@ -54,28 +54,31 @@
         var basePath = '<%=basePath%>"';
     </script>
     <!-- Google Font -->
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <%--<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">--%>
 </head>
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <!-- Site wrapper -->
 <div class="wrapper">
-
+    <!-- 顶部导航栏 -->
     <%@ include file="header.jsp" %>
-
+    <!-- 左侧菜单栏 -->
     <%@include file="main-sidebar.jsp" %>
     <!-- Content Wrapper. Contains page content -->
+    <!-- 中间内容 -->
     <div class="content-wrapper" id="content-wrapper">
         <%--<%@include file="content-wrapper.jsp" %>--%>
     </div>
     <!-- /.content-wrapper -->
-
+    <!-- 底部标注 -->
     <%@include file="footer.jsp"%>
 
+    <!-- 右侧菜单栏 -->
     <%@ include file="control-sidebar.jsp" %>
 
     <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
+    <!-- 右侧菜单栏的样式，底部距离为0等 -->
     <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->

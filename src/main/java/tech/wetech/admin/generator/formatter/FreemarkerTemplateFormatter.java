@@ -39,7 +39,7 @@ import tech.wetech.admin.generator.util.JdbcConfigHelper;
 /**
  * 基于 freemarker 的实现
  *
- * @author liuzh
+ * @author wangzs
  * @since 3.4.5
  */
 public class FreemarkerTemplateFormatter implements TemplateFormatter, ListTemplateFormatter {

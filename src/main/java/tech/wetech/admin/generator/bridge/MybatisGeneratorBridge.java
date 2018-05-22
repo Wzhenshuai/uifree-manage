@@ -27,7 +27,7 @@ import tech.wetech.admin.generator.util.JdbcConfigHelper;
  * The bridge between web and the mybatis generator. All the operation to
  * mybatis generator should proceed through this class
  * <p>
- * Created by cjbi on 1/5/18.
+ * Created by wangzs
  */
 @Component
 public class MybatisGeneratorBridge{

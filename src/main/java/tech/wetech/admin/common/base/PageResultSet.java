@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 通用分页返回结果集
  *
- * @author cjbi
+ * @author wangzs
  */
 public class PageResultSet<T> implements Serializable {
 

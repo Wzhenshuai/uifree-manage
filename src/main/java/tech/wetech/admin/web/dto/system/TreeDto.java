@@ -2,7 +2,7 @@ package tech.wetech.admin.web.dto.system;
 
 /**
  *
- * @author cjbi
+ * @author wangzs
  */
 public class TreeDto {
 

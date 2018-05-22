@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 生成器传输类
  * <p>
- * Created by cjbi on 2018/1/14.
+ * Created by wangzs on 2018/1/14.
  */
 public class GeneratorDto{
 

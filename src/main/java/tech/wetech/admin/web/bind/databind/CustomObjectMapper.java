@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * 自定义JSON转换器
  *
- * @author cjbi
+ * @author wangzs
  */
 public class CustomObjectMapper extends ObjectMapper {
 

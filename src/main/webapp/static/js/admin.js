@@ -1,12 +1,7 @@
 /**
- * author: cjbi
- * date: 2018/4/6
- * mail: cjbi@outlook.com
- */
-/**
  * 常用的插件封装.
  * javaScript language version:ECMAScript 3
- * @author cjbi
+ * @author Wangzs
  * @version 1.5.x-adminlte
  */
 (function ($) {
@@ -48,14 +43,18 @@
                 history.pushState('', 0, href);
             }
             var url = location.href;
+            console.log('+++++++009999992211++++=')
+            console.log(url)
             if (url.indexOf('#') > 0 && url.substr(url.indexOf('#') + 1).length > 0) {
                 var s = url.indexOf('#');
+                console.log('11111'+ s)
                 if (url.substr(s - 1, 1) === '/' || url.substr(s + 1, 1) === '/') {
                     url = url.replace('#', '');
                 } else {
                     url = url.replace('#', '/');
                 }
                 $('#content-wrapper').load(url, function () {
+                    console.log('wahahaURL'+url)
                     //重新加载组件
                     reloadComponent();
                     callback && callback();
@@ -71,6 +70,7 @@
                 //自定义事件
                 $('[data-action]').on('click', function (e) {
                     var str = $(this).attr('data-action');
+                    console.log(str)
                     try {
                         var obj = eval('(' + str + ')');
                     } catch(err) {
@@ -85,6 +85,8 @@
                     if (obj.before) {
                         eval(obj.before + '(obj)');
                     }
+                    console.log('++++-----')
+                    console.log (obj.type)
                     if (obj && obj.type) {
                         switch (obj.type) {
                             //提交

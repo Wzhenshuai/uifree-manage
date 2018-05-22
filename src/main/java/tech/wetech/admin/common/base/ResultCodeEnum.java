@@ -1,7 +1,7 @@
 package tech.wetech.admin.common.base;
 
 /**
- * @author cjbi
+ * @author wangzs
  */
 public enum ResultCodeEnum {
 

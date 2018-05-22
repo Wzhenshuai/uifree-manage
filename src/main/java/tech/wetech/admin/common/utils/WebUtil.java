@@ -18,10 +18,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 /**
  * Web 工具类
  *
- * @author 王波
- * @author 赵卉华 修改为非静态方法, 增加由调用方传入HttpServletRequest的构造方法<br>
+ * @author wangzs 修改为非静态方法, 增加由调用方传入HttpServletRequest的构造方法<br>
  *         解决在404和500页面, 通过RequestContextHolder.getRequestAttributes()获取Request报空指针的问题
- * @version C01 2014-4-3
+ * @version C01 2016-4-3
  * @since v1.0
  */
 public class WebUtil {

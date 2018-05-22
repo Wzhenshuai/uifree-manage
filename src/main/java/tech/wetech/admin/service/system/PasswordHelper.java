@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import tech.wetech.admin.model.system.User;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 14-1-28
+ * <p>User: wangzs
+ * <p>Date: 17-1-28
  * <p>Version: 1.0
  */
 @Service

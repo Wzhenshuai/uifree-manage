@@ -26,7 +26,7 @@ import java.util.*;
 /**
  * 通过自定义模板生成文件的MBG插件，可以配置多个
  * <p>
- * Created by cjbi on 2018/1/6.
+ * Created by wangzs
  */
 public class TemplateFilePlugin extends PluginAdapter {
     /**

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 /**
- * @author cjbi
+ * @author wangzs
  */
 public class Page implements Serializable{
 

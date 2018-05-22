@@ -7,7 +7,7 @@ import tech.wetech.admin.web.dto.system.TreeDto;
 import java.util.List;
 
 /**
- * @author cjbi
+ * @author wangzs
  */
 public interface OrganizationService {
 

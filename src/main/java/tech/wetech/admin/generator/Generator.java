@@ -13,9 +13,8 @@ import org.slf4j.LoggerFactory;
 /**
  * 代码生成器
  * <p>
- * Created by cjbi on 2018/1/7.
+ * Created by wangzs
  *
- * @author cjbi
  */
 public class Generator {
 

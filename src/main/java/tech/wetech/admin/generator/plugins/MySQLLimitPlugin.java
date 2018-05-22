@@ -1,7 +1,7 @@
 package tech.wetech.admin.generator.plugins;
 
 /**
- * Created by zouzhigang on 2016/6/14.
+ * Created by wangzs
  */
 
 import java.util.List;

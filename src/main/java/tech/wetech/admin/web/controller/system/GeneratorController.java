@@ -45,7 +45,7 @@ import tech.wetech.admin.web.dto.system.GeneratorDto;
 /**
  * 代码生成器控制层
  * <p>
- * Created by cjbi on 2018/1/8.
+ * Created by wangzs
  */
 @Controller
 @RequestMapping("/generator")
