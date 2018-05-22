@@ -1,7 +1,6 @@
-# cms-Admin
+# rt-cms
 
-cms-Admin 是基于Maven+Spring+SpringMVC+Mybatis的轻量级后台管理系统，适用于中小型项目的管理后台，支持按钮级别的权限控制，系统具有最基本的用户管理、角色管理、资源管理、组织机构管理、系统日志、代码生成器等通用性功能，企业或个人可直接在此基础上进行开发，扩展，添加各自的需求和业务功能！
-s
+rt-cms 是基于Maven+Spring+SpringMVC+Mybatis的轻量级后台管理系统，适用于中小型项目的管理后台，支持按钮级别的权限控制，系统具有最基本的用户管理、角色管理、资源管理、组织机构管理、系统日志、代码生成器等通用性功能，企业或个人可直接在此基础上进行开发，扩展，添加各自的需求和业务功能！
 
 ## 技术选型
 
@@ -40,26 +39,9 @@ chosen | 选择框插件 | 1.8.3 |  [https://github.com/harvesthq/chosen](https:
 ## 本地部署
 
 - 通过git下载源码
-- 创建数据库wetech_admin，数据库编码为UTF-8
+- 创建数据库rm_cms，数据库编码为UTF-8
 - 执行docs/sql/init.sql文件，初始化数据
 - 修改config.properties文件，更新MySQL账号和密码
 - Eclipse、IDEA执行【clean package jetty:run】命令，即可运行项目
-- 项目访问路径：http://localhost:8888/wetech-admin
+- 项目访问路径：http://localhost:8888/cms
 - 账号密码：admin/123456
-
-
-
-## 代码生成器
-
-通过freemarker模板技术配合mybatis generator插件机制可以直接生成model、mapper、service、controller、service、jsp，单表增删改查不需要写任何代码，你也可以自定义模板，生成想要的代码。
-
-注意：1.5.x版本暂时不提供前台生成代码，可以通过提供的Generator.java类生成。
-
-[代码生成器文档](docs/wetech-admin/CodeGenerator.md)
-
-### 测试用户名密码
-
-## 许可证
-
-cms-Admin 使用 MIT 许可证发布，用户可以自由使用、复制、修改、合并、出版发行、散布、再授权及贩售Wetech-Admin 及其副本。
-
