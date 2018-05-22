@@ -6,7 +6,6 @@
     <description>functions</description>
     <tlib-version>3.0</tlib-version>
     <short-name>fn</short-name>
-    <uri>http://wetech.tech/admin/tags/wetech-functions</uri>
 
     <function>
         <description>obj in collection</description>

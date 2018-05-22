@@ -10,5 +10,5 @@
     <div class="pull-right hidden-xs">
         <b>Version</b> 1.2.x-adminlte
     </div>
-    <%--<strong>Copyright &copy; 2018 <a href="https://github.com/Wzhenshuai/">Uifree</a>.</strong> All rights reserved.--%>
+    <%--<strong>Copyright &copy; 2018 <a href="https://github.com/Wzhenshuai/">CMS</a>.</strong> All rights reserved.--%>
 </footer>

@@ -1,4 +1,4 @@
-package tech.wetech.common;
+package com.rt.common;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.junit.Assert;

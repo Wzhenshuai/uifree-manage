@@ -13,7 +13,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>管理控制台 | Uifree Admin</title>
+    <title>管理控制台 | CMS Admin</title>
     <!-- favicon icon -->
     <link rel="icon" type="image/png" href="<%=request.getContextPath()%>/static/img/favicon.ico">
     <!-- Tell the browser to be responsive to screen width -->
