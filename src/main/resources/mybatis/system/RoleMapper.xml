@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.wetech.admin.mapper.system.RoleMapper">
-  <resultMap id="BaseResultMap" type="tech.wetech.admin.model.system.Role">
+<mapper namespace="com.rt.cms.mapper.system.RoleMapper">
+  <resultMap id="BaseResultMap" type="com.rt.cms.model.system.Role">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="role" jdbcType="VARCHAR" property="role" />
     <result column="description" jdbcType="VARCHAR" property="description" />
@@ -69,7 +69,7 @@
   <sql id="Base_Column_List">
     id, role, description, resource_ids, available
   </sql>
-  <select id="selectByExample" parameterType="tech.wetech.admin.model.system.RoleExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.rt.cms.model.system.RoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -101,19 +101,19 @@
     delete from sys_role
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="tech.wetech.admin.model.system.RoleExample">
+  <delete id="deleteByExample" parameterType="com.rt.cms.model.system.RoleExample">
     delete from sys_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="tech.wetech.admin.model.system.Role">
+  <insert id="insert" parameterType="com.rt.cms.model.system.Role">
     insert into sys_role (id, role, description, 
       resource_ids, available)
     values (#{id,jdbcType=BIGINT}, #{role,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, 
       #{resourceIds,jdbcType=VARCHAR}, #{available,jdbcType=BIT})
   </insert>
-  <insert id="insertSelective" parameterType="tech.wetech.admin.model.system.Role">
+  <insert id="insertSelective" parameterType="com.rt.cms.model.system.Role">
     insert into sys_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -150,7 +150,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="tech.wetech.admin.model.system.RoleExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.rt.cms.model.system.RoleExample" resultType="java.lang.Long">
     select count(*) from sys_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -190,7 +190,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="tech.wetech.admin.model.system.Role">
+  <update id="updateByPrimaryKeySelective" parameterType="com.rt.cms.model.system.Role">
     update sys_role
     <set>
       <if test="role != null">
@@ -208,7 +208,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="tech.wetech.admin.model.system.Role">
+  <update id="updateByPrimaryKey" parameterType="com.rt.cms.model.system.Role">
     update sys_role
     set role = #{role,jdbcType=VARCHAR},
       description = #{description,jdbcType=VARCHAR},

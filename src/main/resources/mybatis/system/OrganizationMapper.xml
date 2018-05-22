@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.wetech.admin.mapper.system.OrganizationMapper">
-  <resultMap id="BaseResultMap" type="tech.wetech.admin.model.system.Organization">
+<mapper namespace="com.rt.cms.mapper.system.OrganizationMapper">
+  <resultMap id="BaseResultMap" type="com.rt.cms.model.system.Organization">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="parent_id" jdbcType="BIGINT" property="parentId" />
@@ -71,7 +71,7 @@
   <sql id="Base_Column_List">
     id, name, parent_id, parent_ids, available, priority, leaf
   </sql>
-  <select id="selectByExample" parameterType="tech.wetech.admin.model.system.OrganizationExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.rt.cms.model.system.OrganizationExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -103,13 +103,13 @@
     delete from sys_organization
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="tech.wetech.admin.model.system.OrganizationExample">
+  <delete id="deleteByExample" parameterType="com.rt.cms.model.system.OrganizationExample">
     delete from sys_organization
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="tech.wetech.admin.model.system.Organization">
+  <insert id="insert" parameterType="com.rt.cms.model.system.Organization">
     insert into sys_organization (id, name, parent_id,
     parent_ids, available, priority,
     leaf)
@@ -117,7 +117,7 @@
     #{parentIds,jdbcType=VARCHAR}, #{available,jdbcType=BIT}, #{priority,jdbcType=INTEGER},
     #{leaf,jdbcType=BIT})
   </insert>
-  <insert id="insertSelective" parameterType="tech.wetech.admin.model.system.Organization">
+  <insert id="insertSelective" parameterType="com.rt.cms.model.system.Organization">
     insert into sys_organization
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -166,7 +166,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="tech.wetech.admin.model.system.OrganizationExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.rt.cms.model.system.OrganizationExample" resultType="java.lang.Long">
     select count(*) from sys_organization
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -214,7 +214,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="tech.wetech.admin.model.system.Organization">
+  <update id="updateByPrimaryKeySelective" parameterType="com.rt.cms.model.system.Organization">
     update sys_organization
     <set>
       <if test="name != null">
@@ -238,7 +238,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="tech.wetech.admin.model.system.Organization">
+  <update id="updateByPrimaryKey" parameterType="com.rt.cms.model.system.Organization">
     update sys_organization
     set name = #{name,jdbcType=VARCHAR},
       parent_id = #{parentId,jdbcType=BIGINT},

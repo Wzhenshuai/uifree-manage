@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.wetech.admin.mapper.system.LogMapper">
-  <resultMap id="BaseResultMap" type="tech.wetech.admin.model.system.Log">
+<mapper namespace="com.rt.cms.mapper.system.LogMapper">
+  <resultMap id="BaseResultMap" type="com.rt.cms.model.system.Log">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="ip" jdbcType="VARCHAR" property="ip" />
@@ -12,7 +12,7 @@
     <result column="status" jdbcType="VARCHAR" property="status" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="tech.wetech.admin.model.system.LogWithBLOBs">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.rt.cms.model.system.LogWithBLOBs">
     <result column="req_uri" jdbcType="LONGVARCHAR" property="reqUri" />
     <result column="args" jdbcType="LONGVARCHAR" property="args" />
     <result column="return_val" jdbcType="LONGVARCHAR" property="returnVal" />
@@ -81,7 +81,7 @@
   <sql id="Blob_Column_List">
     req_uri, args, return_val
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="tech.wetech.admin.model.system.LogExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.rt.cms.model.system.LogExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -105,7 +105,7 @@
       </if>
     </if>
   </select>
-  <select id="selectByExample" parameterType="tech.wetech.admin.model.system.LogExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.rt.cms.model.system.LogExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -139,13 +139,13 @@
     delete from sys_log
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="tech.wetech.admin.model.system.LogExample">
+  <delete id="deleteByExample" parameterType="com.rt.cms.model.system.LogExample">
     delete from sys_log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="tech.wetech.admin.model.system.LogWithBLOBs">
+  <insert id="insert" parameterType="com.rt.cms.model.system.LogWithBLOBs">
     insert into sys_log (id, username, ip, 
       req_method, exec_method, exec_time, 
       exec_desc, status, create_time, 
@@ -157,7 +157,7 @@
       #{reqUri,jdbcType=LONGVARCHAR}, #{args,jdbcType=LONGVARCHAR}, #{returnVal,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="tech.wetech.admin.model.system.LogWithBLOBs">
+  <insert id="insertSelective" parameterType="com.rt.cms.model.system.LogWithBLOBs">
     insert into sys_log
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -236,7 +236,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="tech.wetech.admin.model.system.LogExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.rt.cms.model.system.LogExample" resultType="java.lang.Long">
     select count(*) from sys_log
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -319,7 +319,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="tech.wetech.admin.model.system.LogWithBLOBs">
+  <update id="updateByPrimaryKeySelective" parameterType="com.rt.cms.model.system.LogWithBLOBs">
     update sys_log
     <set>
       <if test="username != null">
@@ -358,7 +358,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="tech.wetech.admin.model.system.LogWithBLOBs">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.rt.cms.model.system.LogWithBLOBs">
     update sys_log
     set username = #{username,jdbcType=VARCHAR},
       ip = #{ip,jdbcType=VARCHAR},
@@ -373,7 +373,7 @@
       return_val = #{returnVal,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="tech.wetech.admin.model.system.Log">
+  <update id="updateByPrimaryKey" parameterType="com.rt.cms.model.system.Log">
     update sys_log
     set username = #{username,jdbcType=VARCHAR},
       ip = #{ip,jdbcType=VARCHAR},

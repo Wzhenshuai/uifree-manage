@@ -81,7 +81,7 @@
     <!-- 初始化系统基本参数 -->
     <servlet>
         <servlet-name>Init</servlet-name>
-        <servlet-class>tech.wetech.admin.web.servlet.InitServlet</servlet-class>
+        <servlet-class>com.rt.cms.web.servlet.InitServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 

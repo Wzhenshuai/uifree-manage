@@ -11,8 +11,8 @@
 
 	<!-- 配置别名 -->
 	<typeAliases>
-		<typeAlias type="tech.wetech.admin.model.system.User" alias="User"/>
-		<!--<typeAlias type="tech.wetech.admin.model.system.User" alias="User"/>-->
+		<typeAlias type="com.rt.cms.model.system.User" alias="User"/>
+		<!--<typeAlias type="User" alias="User"/>-->
 	</typeAliases>
 
 </configuration>

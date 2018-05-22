@@ -16,7 +16,7 @@
 	<context:property-placeholder location="classpath:config.properties"/>
 
 	<!-- 启动组件扫描，排除@Controller组件，该组件由SpringMVC配置文件扫描 -->
-	<context:component-scan base-package="tech.wetech.admin">
+	<context:component-scan base-package="com.rt.cms">
 		<context:exclude-filter type="annotation"
 								 expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
@@ -90,7 +90,7 @@
 	<aop:aspectj-autoproxy proxy-target-class="true"/>
 	<!-- 事务处理 -->
 	<aop:config>
-		<aop:pointcut id="txPointcut" expression="execution(* tech.wetech.admin.service..*+.*(..))" />
+		<aop:pointcut id="txPointcut" expression="execution(* com.rt.cms.service..*+.*(..))" />
 		<aop:advisor id="txAdvisor" advice-ref="txAdvice" pointcut-ref="txPointcut"  />
 	</aop:config>
 
@@ -100,16 +100,16 @@
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
 		<!-- mapper扫描 -->
 		<property name="mapperLocations" value="classpath:mybatis/*/*.xml"></property>
-		<!--<property name="typeAliasesPackage" value="tech.wetech.admin.model"/>-->
+		<!--<property name="typeAliasesPackage" value="com.rt.cms.model"/>-->
 	</bean>
 
 	<!-- 配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
 	<bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="tech.wetech.admin.mapper.*" />
+		<property name="basePackage" value="com.rt.cms.mapper.*" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
 
-	<bean class="tech.wetech.admin.common.utils.SpringUtils"/>
+	<bean class="com.rt.cms.common.utils.SpringUtils"/>
 
 	<import resource="classpath:spring/spring-cache.xml"/>
 	<import resource="classpath:spring/spring-shiro.xml"/>

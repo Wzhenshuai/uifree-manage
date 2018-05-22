@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="tech.wetech.admin.mapper.system.UserMapper">
-	<resultMap id="BaseResultMap" type="tech.wetech.admin.model.system.User">
+<mapper namespace="com.rt.cms.mapper.system.UserMapper">
+	<resultMap id="BaseResultMap" type="com.rt.cms.model.system.User">
 		<id column="id" jdbcType="BIGINT" property="id" />
 		<result column="organization_id" jdbcType="BIGINT" property="organizationId" />
 		<result column="username" jdbcType="VARCHAR" property="username" />
@@ -71,7 +71,7 @@
 	<sql id="Base_Column_List">
 		id, organization_id, username, password, salt, role_ids, locked
 	</sql>
-	<select id="selectByExample" parameterType="tech.wetech.admin.model.system.UserExample" resultMap="BaseResultMap">
+	<select id="selectByExample" parameterType="com.rt.cms.model.system.UserExample" resultMap="BaseResultMap">
 		select
 		<if test="distinct">
 			distinct
@@ -103,13 +103,13 @@
 		delete from sys_user
 		where id = #{id,jdbcType=BIGINT}
 	</delete>
-	<delete id="deleteByExample" parameterType="tech.wetech.admin.model.system.UserExample">
+	<delete id="deleteByExample" parameterType="com.rt.cms.model.system.UserExample">
 		delete from sys_user
 		<if test="_parameter != null">
 			<include refid="Example_Where_Clause" />
 		</if>
 	</delete>
-	<insert id="insert" parameterType="tech.wetech.admin.model.system.User">
+	<insert id="insert" parameterType="com.rt.cms.model.system.User">
 		insert into sys_user (id, organization_id, username,
 		password, salt, role_ids,
 		locked)
@@ -117,7 +117,7 @@
 		#{password,jdbcType=VARCHAR}, #{salt,jdbcType=VARCHAR}, #{roleIds,jdbcType=VARCHAR},
 		#{locked,jdbcType=BIT})
 	</insert>
-	<insert id="insertSelective" parameterType="tech.wetech.admin.model.system.User">
+	<insert id="insertSelective" parameterType="com.rt.cms.model.system.User">
 		insert into sys_user
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="id != null">
@@ -166,7 +166,7 @@
 			</if>
 		</trim>
 	</insert>
-	<select id="countByExample" parameterType="tech.wetech.admin.model.system.UserExample" resultType="java.lang.Long">
+	<select id="countByExample" parameterType="com.rt.cms.model.system.UserExample" resultType="java.lang.Long">
 		select count(*) from sys_user
 		<if test="_parameter != null">
 			<include refid="Example_Where_Clause" />
@@ -214,7 +214,7 @@
 			<include refid="Update_By_Example_Where_Clause" />
 		</if>
 	</update>
-	<update id="updateByPrimaryKeySelective" parameterType="tech.wetech.admin.model.system.User">
+	<update id="updateByPrimaryKeySelective" parameterType="com.rt.cms.model.system.User">
 		update sys_user
 		<set>
 			<if test="organizationId != null">
@@ -238,7 +238,7 @@
 		</set>
 		where id = #{id,jdbcType=BIGINT}
 	</update>
-	<update id="updateByPrimaryKey" parameterType="tech.wetech.admin.model.system.User">
+	<update id="updateByPrimaryKey" parameterType="com.rt.cms.model.system.User">
 		update sys_user
 		set organization_id = #{organizationId,jdbcType=BIGINT},
 		username = #{username,jdbcType=VARCHAR},

@@ -18,7 +18,7 @@
 
     <!-- 配置扫描Controller、ControllerAdvice 注解 -->
     <!-- 注意事项请参考：http://jinnianshilongnian.iteye.com/blog/1762632 -->
-    <context:component-scan base-package="tech.wetech.admin.**.web" use-default-filters="false">
+    <context:component-scan base-package="com.rt.cms.**.web" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
@@ -26,7 +26,7 @@
     <!--相当于注册了DefaultAnnotationHandlerMapping和AnnotationMethodHandlerAdapter两个bean，配置一些messageconverter。即解决了@Controller注解的使用前提配置-->
     <mvc:annotation-driven>
         <mvc:argument-resolvers>
-            <bean class="tech.wetech.admin.web.bind.method.CurrentUserMethodArgumentResolver"/>
+            <bean class="com.rt.cms.web.bind.method.CurrentUserMethodArgumentResolver"/>
         </mvc:argument-resolvers>
         <mvc:message-converters>
             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -35,7 +35,7 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
     <!-- 自定义JSON转换器 -->
-    <bean id="customObjectMapper" class="tech.wetech.admin.web.bind.databind.CustomObjectMapper"/>
+    <bean id="customObjectMapper" class="com.rt.cms.web.bind.databind.CustomObjectMapper"/>
 
     <!-- 当在web.xml 中   DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
     <mvc:default-servlet-handler/>
@@ -53,11 +53,11 @@
     </bean>
 
     <!-- 系统日志 aop配置 备注：已经配置注解 -->
-    <!--<bean id="systemLogAspectj" class="tech.wetech.admin.web.aspectj.SystemLogAspectj" />
+    <!--<bean id="systemLogAspectj" class="com.rt.cms.web.aspectj.SystemLogAspectj" />
 
     <aop:config>
         <aop:aspect ref="systemLogAspectj">
-            <aop:around method="doAround" pointcut="execution(* tech.wetech.admin.web.controller.*.*.*(..))" />
+            <aop:around method="doAround" pointcut="execution(* com.rt.cms.web.controller.*.*.*(..))" />
         </aop:aspect>
     </aop:config>-->
 
@@ -68,7 +68,7 @@
     <bean id="exceptionHandlerExceptionResolver" class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
     </bean>
 
-    <bean class="tech.wetech.admin.web.exception.DefaultExceptionHandler"/>
+    <bean class="com.rt.cms.web.exception.DefaultExceptionHandler"/>
 
     <import resource="spring-mvc-shiro.xml"/>
 
